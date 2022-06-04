@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap'); /* Quicksand */
+
+#deleteAddButtons{
+    width: 150px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+#aditionButton{
+    width: 30px;
+    background: none;
+    border: 1px solid #3232a1;
+    border-radius: 5px 5px 5px 5px;
+    color: inherit;
+    line-height: normal;
+}
+
+#counterBox{
+    margin: 0 auto;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-radius: 0px 0px 12px 12px;
+    margin-top: 10px;
+    background-color: rgb(243, 243, 243);
+    font-family: 'Quicksand', sans-serif;
+}
+
+#counter{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#addToCart{
+    margin-top: 10px;
+    padding: 4px 8px;
+    width: 150px;
+    line-height: normal;
+    background: none;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #3232a1;
+    color: #3232a1;
+    font-size: 0.9rem;
+}
