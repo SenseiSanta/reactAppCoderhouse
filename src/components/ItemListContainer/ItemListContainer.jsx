@@ -1,9 +1,10 @@
 import React from 'react';
-import ItemListContainercs from '../ItemListContainer/ItemListContainer.css';
+import ItemList from '../ItemList/ItemList.jsx'
 
 function ItemListContainer( {greeting} ) {
   return (<>
       <div className='w-100 d-flex mt-3 justify-content-center'>{greeting}</div>
+      <ItemList />
   </>
   )
 }

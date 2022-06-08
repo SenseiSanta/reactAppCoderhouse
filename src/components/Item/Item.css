@@ -1,0 +1,18 @@
+#cardTitle{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#cardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#productDetails{
+    margin: 0 auto;
+    background-color: #2f2159;
+    color: white;
+    width: 150px;
+}

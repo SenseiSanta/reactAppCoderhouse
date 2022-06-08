@@ -1,9 +1,8 @@
-import { counter } from '@fortawesome/fontawesome-svg-core';
 import React, { useState } from 'react'
 import { FaCartPlus } from "react-icons/fa";
 import ItemCountcss from '../ItemCount/ItemCount.css'
 
-export default function ClickTracker( {initial, max, OnAdd} ) {
+export default function ItemCount( {initial, max, OnAdd, id} ) {
     const [counter, setCounter] = useState(initial);
 
     const handleClickUp = () => {
