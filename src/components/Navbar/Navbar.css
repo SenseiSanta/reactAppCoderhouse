@@ -1,0 +1,17 @@
+#navbarItemsOrder{
+    margin: 0 auto;
+}
+
+#navbarBrand{
+    margin: 0;
+}
+
+#cartBox{
+    margin-left: 60px;
+}
+
+@media only screen and (max-width: 991px) {
+    #cartBox{
+        margin-left: 0;
+    }
+  }

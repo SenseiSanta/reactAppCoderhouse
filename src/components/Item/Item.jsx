@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import itemcss from '../Item/Item.css'
 import ItemCount from '../ItemCount/ItemCount.jsx';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer.jsx'
 
 function Item({item}) {
     
@@ -15,7 +17,7 @@ function Item({item}) {
             <img src={item.pictureURL} alt={item.name} style={{width: '150px', height: '150px'}}/>
             <p className="card-text">${item.price}</p>
         </div>
-        <a href="#" className="btn" id='productDetails'> Product Details </a>
+        <Link to={`/product/${item.id}`} className="btn" id='productDetails'> Product Details </Link>
         <ItemCount initial={0} max={10} OnAdd={OnAdd} Id={item.id}/>
     </div>
     </>
