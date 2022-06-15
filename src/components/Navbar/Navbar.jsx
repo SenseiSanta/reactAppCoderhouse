@@ -14,6 +14,9 @@ function Navbar() {
                     <li className="nav-item">
                         <Link to='/product/:category' className="nav-link" aria-current="page" href="#">Guitar</Link>
                     </li>
+
+
+                    
                     <li className="nav-item">
                         <Link to='/product/:category' className="nav-link" href="#">Drum</Link>
                     </li>

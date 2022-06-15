@@ -7,6 +7,7 @@ import Item from '../Item/Item.jsx';
 import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
 
 function ItemDetailContainer( {item} ) {
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [resultado, setResultado] = useState();
