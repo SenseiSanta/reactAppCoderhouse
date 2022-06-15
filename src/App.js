@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
 function App() {
+  const greeting = 'Bienvenidos a Musical House'
   const itemExample = {
     id: 1,
     name: 'Guitarra Electrica Yamaha',
@@ -15,9 +16,12 @@ function App() {
   <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<ItemListContainer greeting={'Bienvenidos a Musical House'} />} />
-        <Route path='/home' element={<ItemListContainer greeting={'Bienvenidos a Musical House'} />} />
+        <Route path='/' element={<ItemListContainer greeting={greeting} />} />
+        <Route path='/home' element={<ItemListContainer greeting={greeting} />} />
+        <Route path='/index' element={<ItemListContainer greeting={greeting} />} />
         <Route path='/product/:id' element={<ItemDetailContainer item={itemExample} />} />
+        <Route path='/category/:id' element={<ItemListContainer greeting={greeting} />} />
+        <Route path='*' element={<h1> PAGE NOT FOUND </h1>} />
       </Routes>
   </BrowserRouter>
   </>

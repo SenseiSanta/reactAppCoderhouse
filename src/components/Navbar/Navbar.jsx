@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget.jsx'
-import ItemListContainer from '../ItemListContainer/ItemListContainer.jsx'
 import navbarcss from '../Navbar/Navbar.css'
 
 function Navbar() {
@@ -12,16 +11,13 @@ function Navbar() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0" id='navbarItemsOrder'>
                     <li className="nav-item">
-                        <Link to='/product/:category' className="nav-link" aria-current="page" href="#">Guitar</Link>
-                    </li>
-
-
-                    
-                    <li className="nav-item">
-                        <Link to='/product/:category' className="nav-link" href="#">Drum</Link>
+                        <Link to='/category/guitar' className="nav-link" aria-current="page">Guitar</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/product/:category' className="nav-link" href="#">Key</Link>
+                        <Link to='/category/drum' className="nav-link">Drum</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to='/category/key' className="nav-link">Key</Link>
                     </li>
                 </ul>
             </div>
