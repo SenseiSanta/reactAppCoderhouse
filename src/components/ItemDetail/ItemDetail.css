@@ -1,12 +1,42 @@
 #itemDetailBox{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+}
+
+#itemBox{
+    display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
 }
 
+#nameText{
+    margin-bottom: 20px;
+}
+
+#priceText{
+    font-size: 2rem;
+}
+
 #descriptionText{
     text-align: center;
+}
+
+#imgItemDetail{
+    max-width: 400px;
+}
+
+#backHomeLink{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #3232a1;
+    border: 1px solid black;
 }
 
 @media only screen and (max-width: 991px) {

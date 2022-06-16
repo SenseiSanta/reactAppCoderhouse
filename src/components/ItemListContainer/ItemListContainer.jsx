@@ -7,27 +7,28 @@ import catalogo from '../../catalogo'
 
 function ItemListContainer( props ) {
     
+const [resultado, setResultado] = useState([]);
 const categoriaID = useParams();
 const {greeting} = props;
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(false);
-const [resultado, setResultado] = useState([]);
-
-console.log(categoriaID)
 
   useEffect(() => {
     setLoading(true)
       const items = new Promise ((res, rej) => {
         setTimeout(() => {
             res(catalogo);
-        },);
+        }, 2000);
       });
 
     items
         .then((result) => {
-            categoriaID
-            ? setResultado(result.filter(item => item.category === categoriaID.id))
-            : setResultado(result)
+            if(categoriaID.id === 'key' || categoriaID.id === 'drum' || categoriaID.id === 'guitar'){
+                setResultado(result.filter(item => item.category === categoriaID.id));
+                } else {
+                setResultado(result);
+                }
+                setLoading(false);
         }) 
         .catch((error) => {
             setError(true);
@@ -35,6 +36,8 @@ console.log(categoriaID)
         .finally(() => {
             setLoading(false);
         })
+    
+    console.log(resultado)
 
   }, [categoriaID])
 
