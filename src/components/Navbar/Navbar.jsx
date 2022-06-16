@@ -24,7 +24,7 @@ function Navbar() {
             <div className='d-flex justify-content-around' id='cartBox'>
                 <ul className="w-auto navbar-nav mb-1 mb-lg-0 justify-content-end pe-3">
                     <li className="nav-item visualCart">
-                        <CartWidget items={4}/>
+                        <Link to={'/cart'}> <CartWidget items={4}/> </Link>
                     </li>
                 </ul>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
