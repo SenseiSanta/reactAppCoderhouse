@@ -30,10 +30,15 @@
     max-width: 400px;
 }
 
-#backHomeLink{
-    font-size: 2rem;
+#backhomeDiv{
     display: flex;
     justify-content: center;
+}
+
+#backHomeLink{
+    display: block;
+    margin: 0 auto;
+    font-size: 2rem;
     text-decoration: none;
     color: #3232a1;
     border: 1px solid black;

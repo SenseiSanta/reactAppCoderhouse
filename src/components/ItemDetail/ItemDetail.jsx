@@ -13,7 +13,9 @@ function ItemDetail( {item} ) {
         <p id='priceText'> ${item.price} </p>
       </div>
     </div>
-    <Link to='/' id='backHomeLink'> Volver </Link>
+    <div id='backHomeDiv'>
+        <Link to='/' id='backHomeLink'> Volver </Link>
+    </div>
     </>
   )
 }
