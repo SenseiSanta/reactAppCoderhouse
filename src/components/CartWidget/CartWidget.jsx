@@ -4,7 +4,7 @@ import CartWidgetcss from '../CartWidget/CartWidget.css'
 
 function CartWidget({ items }) {
     return (<>
-        <a href='*' id='cartLink'> <FaShoppingCart style={{width: '30px', height: '30px', color:'#092641'}}/> {items} </a>
+        <FaShoppingCart style={{width: '45px', height: '40px', color:'#092641'}}/> {items}
     </>)
     }
 export default CartWidget

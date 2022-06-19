@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ItemDetailCSS from '../ItemDetail/ItemDetail.css'
+import itemdetailcss from '../ItemDetail/ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount.jsx';
 
 function ItemDetail( {item} ) {
   
@@ -11,6 +12,7 @@ function ItemDetail( {item} ) {
         <h2 id='nameText'> {item.name} </h2>
         <p id='descriptionText'> {item.description} </p>
         <p id='priceText'> ${item.price} </p>
+        <ItemCount initial={0} max={10} Id={item.id}/>
       </div>
     </div>
     <div id='backHomeDiv'>

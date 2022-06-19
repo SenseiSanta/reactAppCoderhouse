@@ -11,7 +11,7 @@ function Item({item}) {
       }
 
   return (<>
-    <div className='card' style={{width: '240px', margin: '20px'}}>
+    <div className='card' style={{width: '240px', margin: '20px', backgroundColor: '#b4b4b455'}}>
         <div className="card-body" id='cardBody'>
             <p id='cardTitle'>{item.name}</p>
             <img src={item.pictureURL} alt={item.name} style={{width: '150px', height: '150px'}}/>

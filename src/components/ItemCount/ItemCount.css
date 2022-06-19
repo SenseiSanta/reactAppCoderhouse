@@ -20,11 +20,12 @@
 
 #counterBox{
     display: flex;
+    width: 100%;
+    max-width: 250px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 10px 0px;
-    border-radius: 0px 0px 12px 12px;
     margin-top: 10px;
     background-color: rgb(243, 243, 243);
     font-family: 'Quicksand', sans-serif;

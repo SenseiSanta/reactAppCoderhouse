@@ -5,7 +5,6 @@ import {useEffect, useState} from 'react';
 import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
 import { useParams } from 'react-router-dom';
 import catalogo from '../../catalogo'
-import { Filter7Sharp } from '@mui/icons-material';
 
 function ItemDetailContainer() {
   
