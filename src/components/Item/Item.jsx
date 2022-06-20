@@ -11,11 +11,11 @@ function Item({item}) {
       }
 
   return (<>
-    <div className='card' style={{width: '240px', margin: '20px', backgroundColor: '#b4b4b455'}}>
+    <div className='card' id='cardStyle'>
         <div className="card-body" id='cardBody'>
             <p id='cardTitle'>{item.name}</p>
             <img src={item.pictureURL} alt={item.name} style={{width: '150px', height: '150px'}}/>
-            <p className="card-text">${item.price}</p>
+            <p id='cardPrice'>${item.price}</p>
         </div>
         <Link to={`/product/${item.id}`} className="btn" id='productDetails'> Product Details </Link>
         <ItemCount initial={0} max={10} OnAdd={OnAdd} Id={item.id}/>

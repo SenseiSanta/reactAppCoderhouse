@@ -1,9 +1,14 @@
 #itemDetailTitle{
     text-align: center;
+    color: black;
 }
 
 #itemDetailContainer{
-
+    background-color: rgba(145, 126, 101, 0.784);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0px 40px 20px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 @media only screen and (max-width: 991px) {

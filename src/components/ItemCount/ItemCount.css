@@ -11,6 +11,8 @@
 
 #aditionButton{
     width: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
     background: none;
     border: 1px solid #3232a1;
     border-radius: 5px 5px 5px 5px;
@@ -25,9 +27,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px 0px;
-    margin-top: 10px;
-    background-color: rgb(243, 243, 243);
+    padding: 10px 0px 18px;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -37,13 +37,14 @@
 }
 
 #addToCart{
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 4px 8px;
     width: 150px;
     line-height: normal;
     background: none;
     border-radius: 5px 5px 5px 5px;
     border: 1px solid #3232a1;
-    color: #3232a1;
+    color: black;
     font-size: 0.9rem;
+    font-weight: bold;
 }

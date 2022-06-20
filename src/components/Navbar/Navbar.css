@@ -45,6 +45,7 @@
 
 #navEnding{
     position: absolute;
+    z-index: -1;
     width: 100%;
     height: 270px;
     background: rgb(0,0,0);/* #b4b4b455 */ 

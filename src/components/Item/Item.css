@@ -1,6 +1,14 @@
+#cardStyle{
+    width: 240px;
+    margin: 60px;
+    background-color: rgba(145, 126, 101, 0.784);
+}
+
 #cardTitle{
     font-weight: bold;
     font-size: 18px;
+    text-align: center;
+    min-height: 80px;
 }
 
 #cardBody{
@@ -15,4 +23,20 @@
     background-color: #2f2159;
     color: white;
     width: 150px;
+    padding: 3px 0px;
 }
+
+#cardPrice{
+    margin: 0;
+    margin-top: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 576px) {
+    #cardStyle{
+        width: 240px;
+        margin: 40px 20px;
+        background-color: #949494;
+    }
+  }
