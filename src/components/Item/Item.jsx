@@ -6,10 +6,6 @@ import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer.jsx'
 
 function Item({item}) {
     
-    const OnAdd = (quantity) => {
-        console.log(quantity)
-      }
-
   return (<>
     <div className='card' id='cardStyle'>
         <div className="card-body" id='cardBody'>
@@ -17,8 +13,7 @@ function Item({item}) {
             <img src={item.pictureURL} alt={item.name} style={{width: '150px', height: '150px'}}/>
             <p id='cardPrice'>${item.price}</p>
         </div>
-        <Link to={`/product/${item.id}`} className="btn" id='productDetails'> Product Details </Link>
-        <ItemCount initial={0} max={10} OnAdd={OnAdd} Id={item.id}/>
+        <Link to={`/product/${item.id}`} className="btn" id='productDetails'> Ver Producto </Link>
     </div>
     </>
   )

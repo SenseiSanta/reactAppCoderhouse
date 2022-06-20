@@ -23,6 +23,7 @@
 #counterBox{
     display: flex;
     width: 100%;
+    height: 110px;
     max-width: 250px;
     justify-content: center;
     align-items: center;

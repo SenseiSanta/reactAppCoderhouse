@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../img/guitarbg.png'
+import img from '../../icons/guitarbg.png'
 import bgimagecss from '../BgImage/BgImage.css'
 
 function BgImage() {

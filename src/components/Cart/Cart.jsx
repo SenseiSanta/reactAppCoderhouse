@@ -4,7 +4,7 @@ import cartcss from '../Cart/Cart.css';
 function Cart() {
   return <>
     <div id="cartContainer">
-        HOLA
+        Este es tu carrito
     </div>
   </>
 }
