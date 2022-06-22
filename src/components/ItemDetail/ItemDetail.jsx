@@ -1,13 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import itemdetailcss from '../ItemDetail/ItemDetail.css'
+import '../ItemDetail/ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount.jsx';
+import { CartContext } from '../../context/CartContext';
 
 function ItemDetail( {item} ) {
-  const [cant, setCant] = useState(0)
+  const [cant, setCant] = useState(1)
+  const [added, setAdded] = useState(false);
   
-  const onAdd = (quantity) => {
-    console.log(quantity)
+  const {IsInCart, addItem} = useContext(CartContext)
+  
+  const onAdd = () => {
+    alert(cant);
+    IsInCart(item.id);
+    addItem(item, cant);
+    setAdded(true);
   }
 
   return (<>
@@ -17,7 +24,7 @@ function ItemDetail( {item} ) {
         <h2 id='nameText'> {item.name} </h2>
         <p id='descriptionText'> {item.description} </p>
         <p id='priceText'> ${item.price} </p>
-        {cant == 0 ? <ItemCount cant={cant} setCant={setCant} onAdd={onAdd}/> : <div id='finalizeBox'> <Link to='/cart'> Ver Carrito </Link> </div>}
+        {added ? <div id='finalizeBox'> <Link to='/cart'> Ver Carrito </Link> </div> : <ItemCount cant={cant} setCant={setCant} onAdd={onAdd}/>}
       </div>
     </div>
     <div id='backHomeDiv'>

@@ -36,15 +36,13 @@ const [error, setError] = useState(false);
         .finally(() => {
             setLoading(false);
         })
-    
-    console.log(resultado)
 
   }, [categoriaID])
 
   return (<>
       <h1 className='w-100 d-flex justify-content-center text-black'>{greeting}</h1>
-      <div>{loading && <LoadingWidget />}</div>
-      <div>{error && 'Ha ocurrido un error.'}</div>
+      {loading && <LoadingWidget />}
+      {error && 'Ha ocurrido un error.'}
       <ItemList resultado={resultado}/>
   </> 
   )

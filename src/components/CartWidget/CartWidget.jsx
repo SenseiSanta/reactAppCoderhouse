@@ -1,10 +1,15 @@
 import React from 'react';
+import { useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
-import CartWidgetcss from '../CartWidget/CartWidget.css'
+import { CartContext } from '../../context/CartContext';
+import '../CartWidget/CartWidget.css'
 
-function CartWidget({ items }) {
+function CartWidget() {
+    
+    const { GetItemQty } = useContext(CartContext);
+    
     return (<>
-        <FaShoppingCart style={{width: '45px', height: '40px', color:'#092641'}}/> {items}
+        <FaShoppingCart style={{width: '45px', height: '40px', color:'#092641'}}/> {GetItemQty()}
     </>)
     }
 export default CartWidget

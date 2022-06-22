@@ -5,11 +5,13 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 import Cart from './components/Cart/Cart';
 import BgImage from './components/BgImage/BgImage';
+import MyProvider from './context/CartContext';
 
 function App() {
   const greeting = 'Bienvenidos a Musical House'
   return (<>
   <BrowserRouter>
+    <MyProvider>
       <Navbar />
       <BgImage />
       <Routes>
@@ -21,6 +23,7 @@ function App() {
         <Route path='/category/:id' element={<ItemListContainer greeting={greeting} />} />
         <Route path='*' element={<h1> PAGE NOT FOUND </h1>} />
       </Routes>
+    </MyProvider>
   </BrowserRouter>
   </>
 )}
