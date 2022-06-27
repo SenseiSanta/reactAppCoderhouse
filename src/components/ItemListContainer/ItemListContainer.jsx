@@ -1,3 +1,4 @@
+//@ts-check
 import React from 'react';
 import ItemList from '../ItemList/ItemList.jsx'
 import {useState, useEffect} from 'react';

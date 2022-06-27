@@ -1,8 +1,7 @@
+//@ts-check
 import React, { useState, useEffect } from 'react'
 import Item from '../Item/Item.jsx';
-import itemListcss from '../ItemList/ItemList.css'
-import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
-
+import '../ItemList/ItemList.css'
 
 function ItemList( {resultado} ) {
   

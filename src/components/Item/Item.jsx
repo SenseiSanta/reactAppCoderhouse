@@ -1,8 +1,7 @@
+//@ts-check
 import React from 'react';
 import { Link } from 'react-router-dom';
-import itemcss from '../Item/Item.css'
-import ItemCount from '../ItemCount/ItemCount.jsx';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer.jsx'
+import '../Item/Item.css'
 
 function Item({item}) {
     

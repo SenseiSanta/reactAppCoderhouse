@@ -1,3 +1,4 @@
+//@ts-check
 import React from 'react';
 import { useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';

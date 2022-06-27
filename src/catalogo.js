@@ -1,6 +1,19 @@
 const catalogo = [
-    {id: 1, name: 'Guitarra electrica Alabama TL-201', price: 720, description: 'Guitarra electrica Alabama para diestros, para todo tipo de amplificadores y generos', category: 'guitar', pictureURL: '../img/products/guitarAlabamaTL201.png'}, 
-    {id: 2, name: 'Guitarra electrica Les Paul SX EE3 SERIES', price: 600, description: 'Guitarra electrica Les Paul SX EE3 SERIES de muy buena calidad, prefentenmente para genero rock y pop', category: 'guitar', pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_898146-MLA31579260003_072019-O.jpg'},
+{
+    id: 1,
+    name: 'Guitarra electrica Alabama TL-201',
+    price: 720,
+    description: 'Guitarra electrica Alabama para diestros, para todo tipo de amplificadores y generos',
+    category: 'guitar',
+    pictureURL: '../img/products/guitarAlabamaTL201.png'
+}, 
+{
+    id: 2,
+    name: 'Guitarra electrica Les Paul SX EE3 SERIES',
+    price: 600,
+    description: 'Guitarra electrica Les Paul SX EE3 SERIES de muy buena calidad prefentenmente para genero rock y pop',
+    category: 'guitar', pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_898146-MLA31579260003_072019-O.jpg'
+},
     {id: 3, name: 'Guitarra electrica Les Paul Epiphone Special VE', price: 580, description: 'Guitarra electrica Les Paul Epiphone Special VE, de buena gama intermedia, ideal para comenzar a tocar en bandas', category: 'guitar', pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_660319-MLA43545062717_092020-O.webp'},
     {id: 4, name: 'Paiste 101 Crash Ride 18 Pulgadas', price: 110, description: 'Crash Ride de 18 pulgadas del set 101 de Paiste, un muy buen platillo para comenzar a tocar, muy flexible, sonido armonioso', category:'drum', pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_955165-MLA31063898160_062019-O.webp'}, 
     {id: 5, name: 'Paiste 101 Hi Hat 14 Pulgadas', price: 140, description: 'Hi-Hat de 14 pulgadas del set 101 de Paiste, gran juego de platos para comenzar a tocar, sonido armonioso', category:'drum', pictureURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmhF6xDrCN8T5NKdM_N2S3Sq0WM4VL0hYXQTX3DgfsimrOou7ODphtbizYNhBtvBvxT5k&usqp=CAU'},

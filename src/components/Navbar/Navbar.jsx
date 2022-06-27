@@ -1,7 +1,8 @@
+//@ts-check
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget.jsx'
-import navbarcss from '../Navbar/Navbar.css'
+import '../Navbar/Navbar.css'
 import Logo from '../Logo/Logo'
 
 function Navbar() {

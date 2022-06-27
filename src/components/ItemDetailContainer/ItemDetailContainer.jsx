@@ -1,10 +1,11 @@
-import React from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import ItemDetailContainerCSS from '../ItemDetailContainer/ItemDetailContainer.css'
+//@ts-check
+import React from 'react';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import '../ItemDetailContainer/ItemDetailContainer.css';
 import {useEffect, useState} from 'react';
 import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
 import { useParams } from 'react-router-dom';
-import catalogo from '../../catalogo'
+import catalogo from '../../catalogo';
 
 function ItemDetailContainer() {
   

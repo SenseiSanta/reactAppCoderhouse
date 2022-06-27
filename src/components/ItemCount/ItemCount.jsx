@@ -1,6 +1,7 @@
+//@ts-check
 import React, { useState } from 'react'
 import { FaCartPlus } from "react-icons/fa";
-import ItemCountcss from '../ItemCount/ItemCount.css'
+import '../ItemCount/ItemCount.css'
 
 export default function ItemCount( props ) {
     const { cant, setCant, onAdd } = props;

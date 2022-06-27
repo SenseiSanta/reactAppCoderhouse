@@ -7,7 +7,7 @@ const {Provider} = CartContext;
 
 const MyProvider = ({children}) => {
 
-        const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState([]);
 
     // Detecta si el item seleccionado ya esta en el carrito. Devuelve boolean
     const IsInCart = (id) => {
@@ -52,10 +52,16 @@ const MyProvider = ({children}) => {
     }
 
     // Retorna el valor total del carrito
-    const GetItemPrice = () => {
+    const GetItemPrice = (item) => {
+        return item.quantity * item.price;
+    }
+
+    // Retorna el valor total del carrito
+    const GetCartPrice = () => {
         return cart.reduce((acc, x) => acc += x.quantity * x.price, 0)
     }
-        return <Provider value={{cart, IsInCart, addItem, deleteItem, emptyCart, GetItemQty, GetItemPrice}}> {children} </Provider>
+
+        return <Provider value={{cart, IsInCart, addItem, deleteItem, emptyCart, GetItemQty, GetItemPrice, GetCartPrice}}> {children} </Provider>
     }
 
 export default MyProvider;

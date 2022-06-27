@@ -1,3 +1,4 @@
+//@ts-check
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
@@ -6,8 +7,22 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import BgImage from './components/BgImage/BgImage';
 import MyProvider from './context/CartContext';
+import { initializeApp } from "firebase/app";
+
 
 function App() {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAgxQ9u9uBOBkAtLEphHDjT0XpR8sdARAs",
+    authDomain: "musicalhouse-react.firebaseapp.com",
+    projectId: "musicalhouse-react",
+    storageBucket: "musicalhouse-react.appspot.com",
+    messagingSenderId: "897319918122",
+    appId: "1:897319918122:web:0a5069499a3138be4b4153"
+  };
+  
+  initializeApp(firebaseConfig);
+
   const greeting = 'Bienvenidos a Musical House'
   return (<>
   <BrowserRouter>

@@ -1,6 +1,7 @@
+//@ts-check
 import React from 'react'
 import img from '../../icons/guitarbg.png'
-import bgimagecss from '../BgImage/BgImage.css'
+import '../BgImage/BgImage.css'
 
 function BgImage() {
   return (
