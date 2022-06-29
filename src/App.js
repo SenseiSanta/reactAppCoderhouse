@@ -1,14 +1,13 @@
 //@ts-check
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
-import Cart from './components/Cart/Cart';
-import BgImage from './components/BgImage/BgImage';
-import MyProvider from './context/CartContext';
 import { initializeApp } from "firebase/app";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './App.css';
+import BgImage from './components/BgImage/BgImage';
+import Cart from './components/Cart/Cart';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+import Navbar from './components/Navbar/Navbar';
+import MyProvider from './context/CartContext';
 
 function App() {
 

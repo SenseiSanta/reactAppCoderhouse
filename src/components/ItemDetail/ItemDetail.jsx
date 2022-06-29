@@ -5,26 +5,25 @@ import '../ItemDetail/ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount.jsx';
 import { CartContext } from '../../context/CartContext';
 
-function ItemDetail( {item} ) {
+function ItemDetail( {result} ) {
   const [cant, setCant] = useState(1)
   const [added, setAdded] = useState(false);
   
   const {IsInCart, addItem} = useContext(CartContext)
   
   const onAdd = () => {
-    alert(cant);
-    IsInCart(item.id);
-    addItem(item, cant);
+    IsInCart(result.id);
+    addItem(result, cant);
     setAdded(true);
   }
 
   return (<>
     <div id='itemDetailBox'>
-      <img src={item.pictureURL} id='imgItemDetail' alt="imagen de producto" />
+      <img src={result.pictureURL} id='imgItemDetail' alt="imagen de producto" />
       <div id='itemBox'>
-        <h2 id='nameText'> {item.name} </h2>
-        <p id='descriptionText'> {item.description} </p>
-        <p id='priceText'> ${item.price} </p>
+        <h2 id='nameText'> {result.name} </h2>
+        <p id='descriptionText'> {result.description} </p>
+        <p id='priceText'> ${result.price} </p>
         {added ? <div id='finalizeBox'> <Link to='/cart'> Ver Carrito </Link> </div> : <ItemCount cant={cant} setCant={setCant} onAdd={onAdd}/>}
       </div>
     </div>

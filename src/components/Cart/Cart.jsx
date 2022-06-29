@@ -1,5 +1,5 @@
 //@ts-check
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom'
 import '../Cart/Cart.css';
@@ -7,13 +7,12 @@ import '../Cart/Cart.css';
 function Cart() {
 
   const { cart, deleteItem, GetCartPrice, GetItemPrice, GetItemQty } = useContext(CartContext);
-  const [condition, setCondition] = useState(true)
 
   const itemsInCart = GetItemQty()
-  console.log(itemsInCart)
-
     return <>
       <div id="cartContainer">
+
+        {/* OPCION 1: Devuelve el carrito cuando hay items */}
         {itemsInCart !== 0 && (<>
           {cart.map (item =><div id="cartItem">
                                       <div id="firstCol">
@@ -29,11 +28,14 @@ function Cart() {
                                     </div>
           )}
           <div id="finalizeShopping">
+            <button> Clear Cart </button>
             <h2> Total: {GetCartPrice()} </h2>
-            <button> Comprar </button>
+            <button> Buy </button>
           </div></>)
         }
       
+
+        {/* OPCION 2: Devuelve el carrito cuando hay items */}
         {itemsInCart === 0 && (<>
           <p id="cartItemText"> CARRITO VACIO </p> 
           <Link to={"/home"} id="goShopping"> Ir a comprar </Link>

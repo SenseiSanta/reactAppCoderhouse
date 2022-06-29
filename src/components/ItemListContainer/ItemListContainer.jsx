@@ -1,10 +1,10 @@
-//@ts-check
+/* //@ts-check */
 import React from 'react';
 import ItemList from '../ItemList/ItemList.jsx'
 import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
-import catalogo from '../../catalogo'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 function ItemListContainer( props ) {
     
@@ -15,28 +15,27 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
-      const items = new Promise ((res, rej) => {
-        setTimeout(() => {
-            res(catalogo);
-        }, 2000);
-      });
+  
+    const db = getFirestore();
+    const itemCollection = collection(db, 'items');
 
-    items
-        .then((result) => {
-            if(categoriaID.id === 'key' || categoriaID.id === 'drum' || categoriaID.id === 'guitar'){
-                setResultado(result.filter(item => item.category === categoriaID.id));
-                } else {
-                setResultado(result);
-                }
-                setLoading(false);
-        }) 
-        .catch((error) => {
-            setError(true);
-        })
-        .finally(() => {
-            setLoading(false);
-        })
+    setLoading(true)
+
+    if (categoriaID.id) {
+      const filter = query(itemCollection, where('category', '==', categoriaID.id));
+      getDocs(filter).then((snapshot) => { 
+        setResultado(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
+      })
+      .catch( (error) => console.log(`Ha ocurrido un error ' + ${error}`) )
+      .finally( ()=> setLoading(false) )
+
+    } else {
+      getDocs(itemCollection).then((snapshot) => { 
+        setResultado(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
+      })
+      .catch( (error) => setError(`Ha ocurrido un error ' + ${error}`) )
+      .finally( ()=> setLoading(false) )
+    }
 
   }, [categoriaID])
 

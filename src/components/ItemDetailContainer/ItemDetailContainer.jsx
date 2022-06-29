@@ -5,37 +5,34 @@ import '../ItemDetailContainer/ItemDetailContainer.css';
 import {useEffect, useState} from 'react';
 import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
 import { useParams } from 'react-router-dom';
-import catalogo from '../../catalogo';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 function ItemDetailContainer() {
   
-  const [item, setItem] = useState(null);
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [result, setResult] = useState([])
   const { id } = useParams();
 
-  const Filtrar = (array, id) => {
-    let selectedItem = array.find((item) => {
-      return item.id === parseInt(id);
-    });
-    setItem(selectedItem);
-    setLoading(false);
-  };
-
   useEffect(() => {
-    const getItems = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(catalogo);
-      }, 2000);
-    });
-    getItems.then((data) => {
-      Filtrar(data, id);
-    });
-  }, [id]);
+    const db = getFirestore();
+    const itemRef = doc(db, 'items', id)
+
+    setLoading(true)
+
+    getDoc(itemRef).then((snapshot) => {
+      setResult({ ...snapshot.data(), id: snapshot.id })
+    })
+    .catch((error) => setError(error))
+    .finally( () => setLoading(false))
+
+  }, [id])
   
   return (<>
   <h1 id='itemDetailTitle'> Detalle de producto: </h1>
   <div>{loading && <LoadingWidget />}</div>
-  <div id='itemDetailContainer'>{item && <ItemDetail item={item} />} </div>
+  <div>{error && 'Ha ocurrido un error.'}</div>
+  <div id='itemDetailContainer'>{result && <ItemDetail result={result} />} </div>
     </>
   )
 }
