@@ -3,7 +3,9 @@ import { initializeApp } from "firebase/app";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import BgImage from './components/BgImage/BgImage';
+import BuyMenu from "./components/BuyMenu/BuyMenu";
 import Cart from './components/Cart/Cart';
+import Contact from "./components/Contact/Contact";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 import Navbar from './components/Navbar/Navbar';
@@ -33,6 +35,8 @@ function App() {
         <Route path='/home' element={<ItemListContainer greeting={greeting} />} />
         <Route path='/index' element={<ItemListContainer greeting={greeting} />} />
         <Route path='/product/:id' element={<ItemDetailContainer />} />
+        <Route path='/buy' element={<BuyMenu />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/category/:id' element={<ItemListContainer greeting={greeting} />} />
         <Route path='*' element={<h1> PAGE NOT FOUND </h1>} />

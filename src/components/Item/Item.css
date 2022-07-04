@@ -34,10 +34,13 @@
     font-size: 1.1rem;
 }
 
+#cardStock{
+    margin: 0;
+}
+
 @media only screen and (max-width: 576px) {
     #cardStyle{
         width: 240px;
         margin: 40px 20px;
-        background-color: #949494;
     }
   }

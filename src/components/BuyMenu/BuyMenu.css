@@ -1,0 +1,23 @@
+#buyMenuTitle{
+    color: black;
+    text-align: center;
+
+}
+
+#form{
+    margin: 30px auto 0 auto;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: wheat;
+}
+
+@media only screen and (max-width: 475px) {
+    
+    #buyMenuTitle{
+        font-size: 1.5rem;
+    }
+}

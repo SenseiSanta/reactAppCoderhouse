@@ -4,10 +4,9 @@ import { FaCartPlus } from "react-icons/fa";
 import '../ItemCount/ItemCount.css'
 
 export default function ItemCount( props ) {
-    const { cant, setCant, onAdd } = props;
+    const { cant, setCant, onAdd, max } = props;
 
-    const [initial, setInitial] = useState(1);
-    const [max, setMax] = useState(10);
+    const initial = 1;
 
     const handleClickUp = () => {
         if (cant < max) {

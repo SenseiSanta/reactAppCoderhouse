@@ -7,8 +7,8 @@ import '../Cart/Cart.css';
 function Cart() {
 
   const { cart, deleteItem, GetCartPrice, GetItemPrice, GetItemQty } = useContext(CartContext);
-
   const itemsInCart = GetItemQty()
+  
     return <>
       <div id="cartContainer">
 
@@ -28,9 +28,9 @@ function Cart() {
                                     </div>
           )}
           <div id="finalizeShopping">
-            <button> Clear Cart </button>
+            <Link id='buyButton' to={'/buy'}> Buy </Link>
             <h2> Total: {GetCartPrice()} </h2>
-            <button> Buy </button>
+            <button> Reset </button>
           </div></>)
         }
       

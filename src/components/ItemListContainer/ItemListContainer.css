@@ -1,4 +1,10 @@
+#greeting{
+    text-align: center;
+    color: rgb(119, 119, 90);
+    margin: 0.5rem 0;
+    padding: 0 10px;
+}
+
 a {
     text-decoration: none;
 }
-

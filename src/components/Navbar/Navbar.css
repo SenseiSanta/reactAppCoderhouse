@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap');
 
 #navbar{
-    background: #a9a9a92d;
+    /* background: #a9a9a92d; */
     top: 0;
     width: 100%;
+}
+
+#NavbarOrder{
+    display: flex;
+    flex-direction: column;
 }
 
 #navbarCategory{
@@ -14,13 +19,24 @@
     background-color: rgba(62, 49, 22, 0.193);
     border: 1px solid black;
     border-radius: 20px 20px 20px 20px;
-    color: black;
+    color: #bbbb9d;
     font-family: 'Zilla Slab', serif;
 }
 
 #navbarCategory:hover{
     transform: scale(1.07);
     transition: transform 80ms;
+}
+
+
+.navbarCategories{
+    position: absolute;
+    top: 35px;
+}
+
+#topNavbar{
+    width: 100%;
+    display: flex;
 }
 
 #navbarItemsOrder{
@@ -35,27 +51,80 @@
 }
 
 #cartBox{
-    margin-left: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 #linkToCart{
     text-decoration: none;
-    color: aqua;
+    color: #bbbb9d;
 }
 
-#navEnding{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 270px;
-    background: rgb(0,0,0);/* #b4b4b455 */ 
-    background: linear-gradient(360deg, rgba(0,0,0,0) 0%, #a9a9a92d);
+#linkToContact{
+    color: #bbbb9d;
+}
+
+#menuButton{
+    color: #bbbb9d;
+}
+
+#rightNavbar{
+    width: 220px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#rightNavbarItem{
+    min-width: 70px;
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 991px) {
     
+    .navbarCategories{
+        position: static;
+        width: 80%;
+    }
+
     #cartBox{
-        margin-left: 0;
+        margin-left: 10px;
+    }
+
+    #navbarItemsOrder{
+        min-width: 0px;
+        flex-direction: row;
+        height: 80px;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    
+    #navbar{
+        padding-bottom: 20px;
+    }
+    
+    #topNavbar{
+        flex-direction: column;
+    }
+    
+    #cartBox{
+        margin: 10px 0 0 0 ;
+    }
+
+    #rightNavbar{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     #navbarCategory{
@@ -64,5 +133,9 @@
         padding: 5px;
         background-color: rgba(62, 49, 22, 0.193);
         border: 0;
+    }
+
+    #navbarBrand{
+        margin: 0 auto;
     }
 }

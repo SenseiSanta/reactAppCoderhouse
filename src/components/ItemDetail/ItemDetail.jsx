@@ -24,7 +24,7 @@ function ItemDetail( {result} ) {
         <h2 id='nameText'> {result.name} </h2>
         <p id='descriptionText'> {result.description} </p>
         <p id='priceText'> ${result.price} </p>
-        {added ? <div id='finalizeBox'> <Link to='/cart'> Ver Carrito </Link> </div> : <ItemCount cant={cant} setCant={setCant} onAdd={onAdd}/>}
+        {added ? <div id='finalizeBox'> <Link to='/cart'> Ver Carrito </Link> </div> : <ItemCount cant={cant} setCant={setCant} onAdd={onAdd} max={result.stock}/>}
       </div>
     </div>
     <div id='backHomeDiv'>

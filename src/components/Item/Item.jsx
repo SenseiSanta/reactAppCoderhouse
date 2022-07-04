@@ -11,6 +11,7 @@ function Item({item}) {
             <p id='cardTitle'>{item.name}</p>
             <img src={item.pictureURL} alt={item.name} style={{width: '150px', height: '150px'}}/>
             <p id='cardPrice'>${item.price}</p>
+            <p id='cardStock'>Stock: {item.stock}</p>
         </div>
         <Link to={`/product/${item.id}`} className="btn" id='productDetails'> Ver Producto </Link>
     </div>

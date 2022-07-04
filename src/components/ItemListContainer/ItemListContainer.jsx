@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingWidget from '../LoadingWidget/LoadingWidget.jsx';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import '../ItemListContainer/ItemListContainer.css'
 
 function ItemListContainer( props ) {
     
@@ -40,7 +41,7 @@ const [error, setError] = useState(false);
   }, [categoriaID])
 
   return (<>
-      <h1 className='w-100 d-flex justify-content-center text-black'>{greeting}</h1>
+      <h1 className='w-100 d-flex justify-content-center' id='greeting'>{greeting}</h1>
       {loading && <LoadingWidget />}
       {error && 'Ha ocurrido un error.'}
       <ItemList resultado={resultado}/>
