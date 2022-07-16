@@ -38,7 +38,7 @@ export default function ItemCount( props ) {
         <button id='addToCart' onClick={() => {
             onAdd();
             }}>
-            <FaCartPlus style={{paddingBottom: '2px', color: '#397e46'}} /> Añadir al carrito
+            <FaCartPlus style={{paddingBottom: '2px', color: '#0a4a13'}} /> Añadir al carrito
         </button>
     </div>
     </>

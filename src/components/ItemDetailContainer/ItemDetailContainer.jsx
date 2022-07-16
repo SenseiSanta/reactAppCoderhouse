@@ -16,7 +16,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     const db = getFirestore();
-    const itemRef = doc(db, 'items', id)
+    const itemRef = doc(db, 'items', id);
 
     setLoading(true)
 
@@ -29,7 +29,6 @@ function ItemDetailContainer() {
   }, [id])
   
   return (<>
-  <h1 id='itemDetailTitle'> Detalle de producto: </h1>
   <div>{loading && <LoadingWidget />}</div>
   <div>{error && 'Ha ocurrido un error.'}</div>
   <div id='itemDetailContainer'>{result && <ItemDetail result={result} />} </div>

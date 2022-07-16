@@ -1,6 +1,6 @@
 //@ts-check
 import React from 'react'
-import img from '../../icons/guitarbg.png'
+import img from '../../icons/2ndBackGroundDark.png'//* guitarbg.png */
 import '../BgImage/BgImage.css'
 
 function BgImage() {

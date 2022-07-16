@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 #greeting{
     text-align: center;
-    color: rgb(119, 119, 90);
+    color: #bbbb9d;
     margin: 0.5rem 0;
     padding: 0 10px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 a {

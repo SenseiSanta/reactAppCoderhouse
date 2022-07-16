@@ -1,13 +1,22 @@
 #cartContainer{
-    background-color: rgba(98, 63, 20, 0.307);
+    background-color: rgba(62, 39, 11, 0.438);
     margin: 0 auto;
     padding: 20px;
-    width: 800px;
+    max-width: 800px;
     min-width: 280px;
     min-height: 200px;
     margin-top: 20px;
     border-radius: 10px 10px 10px 10px;
     color: black;
+}
+
+#emptyCart{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #cartItem{
@@ -59,8 +68,33 @@
 
 #goShopping{
     display: flex;
+    text-decoration: none;
     justify-content: center;
     color: white;
     font-size: 2rem;
     background-color: black;
+    padding: 0px 10px;
+    border: 2px solid #bbbb9d;
+    border-radius: 20px 20px 20px 20px;
+}
+
+@media only screen and (max-width: 870px) {
+    
+    #cartContainer{
+        margin: 0 35px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    
+    #cartContainer{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    
+    #cartContainer{
+        margin: 0 5px;
+    }
 }

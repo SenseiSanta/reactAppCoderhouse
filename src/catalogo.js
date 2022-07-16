@@ -14,7 +14,7 @@ const catalogo = [
     price: 600,
     description: 'Guitarra electrica Les Paul SX EE3 SERIES de muy buena calidad prefentenmente para genero rock y pop',
     category: 'guitar',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_898146-MLA31579260003_072019-O.jpg',
+    pictureURL: '../img/products/lesPaulSXEE3Series.png',
     stock: 25
 },
 {
@@ -23,7 +23,7 @@ const catalogo = [
     price: 580,
     description: 'Guitarra electrica Les Paul Epiphone Special VE, de buena gama intermedia, ideal para comenzar a tocar en bandas',
     category: 'guitar',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_660319-MLA43545062717_092020-O.webp',
+    pictureURL: '../img/products/lesPaulEpiphoneSpecialVE.png',
     stock: 31
 },
 {
@@ -32,7 +32,7 @@ const catalogo = [
     price: 110,
     description: 'Crash Ride de 18 pulgadas del set 101 de Paiste, un muy buen platillo para comenzar a tocar, muy flexible, sonido armonioso',
     category:'drum',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_955165-MLA31063898160_062019-O.webp',
+    pictureURL: '../img/products/paiste101CrashRide18P.png',
     stock: 15
 }, 
 {
@@ -41,7 +41,7 @@ const catalogo = [
     price: 140,
     description: 'Hi-Hat de 14 pulgadas del set 101 de Paiste, gran juego de platos para comenzar a tocar, sonido armonioso',
     category:'drum',
-    pictureURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmhF6xDrCN8T5NKdM_N2S3Sq0WM4VL0hYXQTX3DgfsimrOou7ODphtbizYNhBtvBvxT5k&usqp=CAU',
+    pictureURL: '../img/products/paiste101HiHat14P.png',
     stock: 10
 },
 {
@@ -50,7 +50,7 @@ const catalogo = [
     price: 70,
     description: 'Soporte Mapex Boom hasta platos de 20 pulgadas, consultar por set completo',
     category:'drum',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_796796-MLA31017111008_062019-O.webp',
+    pictureURL: '../img/products/soporteMapexJirafaBoom.png',
     stock: 20
 },
 {
@@ -59,7 +59,7 @@ const catalogo = [
     price: 880,
     description: 'Teclado y sintetizador Roland, de muy buena calidad, para avanzados que buscan flexibilidad y buen sonido para tocar en vivo',
     category:'key',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_927391-MLA45374340759_032021-O.webp',
+    pictureURL: '../img/products/tecladoRolandGo61kl61Sintetizador.png',
     stock: 50
 }, 
 {
@@ -68,7 +68,7 @@ const catalogo = [
     price: 5,
     description: 'Fuente adaptable para todo tipo de teclados e instrumentos varios. Hasta 7,5v',
     category:'key',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_690896-MLA41147203406_032020-O.webp',
+    pictureURL: '../img/products/fuenteTecladoCasioModelo7_5v.png',
     stock: 30
 },
 {
@@ -77,7 +77,7 @@ const catalogo = [
     price: 10,
     description: 'Encordado para jazz de fender, juego de 7 cuerdas (set de 6 con una mas gruesa de regalo)',
     category:'guitar',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_868789-MLA48067330974_102021-O.webp',
+    pictureURL: '../img/products/encordadoJazzFenderGuitarraElectrica013_056_250jm.png',
     stock: 18
 },
 {
@@ -86,7 +86,7 @@ const catalogo = [
     price: 610,
     description: 'Gran guitarra criolla marca Yamaha, para aficionados que buscan un sonido armonioso y elegante',
     category:'guitar',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_634463-MLA46245880276_062021-O.webp',
+    pictureURL: '../img/products/guitarraCriollaClásicaYamahaC80.png',
     stock: 44
 }, 
 {
@@ -95,7 +95,7 @@ const catalogo = [
     price: 820,
     description: 'Bateria Parquer, para comenzar a tocar. Incluye platos de practica y set de 3 soportes (Hi-Hat, Crash y Ride)',
     category:'drum',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_935827-MLA44038834299_112020-O.webp',
+    pictureURL: '../img/products/bateriaAcústicaParquer5CuerposNegraPlatillosSoporte.png',
     stock: 8
 },
 {
@@ -104,7 +104,7 @@ const catalogo = [
     price: 20,
     description: 'Funda en oferta, 3 bolsillos, calidad premium, flexibilidad para todo tipo de guitarras, suavidad interna',
     category:'guitar',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_781608-MLA31011649051_062019-O.webp',
+    pictureURL: '../img/products/fundaGuitarraEléctricaProelBag120pn.png',
     stock: 30
 },
 {
@@ -113,7 +113,7 @@ const catalogo = [
     price: 930,
     description: 'Importante amplificador Marshall para profesionales o conciertos en vivo, excelente calidad de sonido, adaptable para bajos, guitarras y microfonos',
     category:'guitar',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_817764-MLA41229313438_032020-O.webp',
+    pictureURL: '../img/products/amplificadorGuitarraMarshallDsl_20_Cr_12_2Canales.png',
     stock: 10
 },
 {
@@ -122,7 +122,7 @@ const catalogo = [
     price: 13000,
     description: 'Increible piano de cola Yamaha Gb1kpe, interesados mandar por mensajeria privada para mas detalles de producto, medios de pago y traslado',
     category:'key',
-    pictureURL: 'https://http2.mlstatic.com/D_NQ_NP_927123-MLA31597656548_072019-O.webp',
+    pictureURL: '../img/products/pianoColaYamahaGb1kpe.png',
     stock: 3
 }]
 

@@ -6,7 +6,7 @@ import '../Cart/Cart.css';
 
 function Cart() {
 
-  const { cart, deleteItem, GetCartPrice, GetItemPrice, GetItemQty } = useContext(CartContext);
+  const { cart, deleteItem, GetCartPrice, GetItemPrice, GetItemQty, emptyCart } = useContext(CartContext);
   const itemsInCart = GetItemQty()
   
     return <>
@@ -29,18 +29,19 @@ function Cart() {
           )}
           <div id="finalizeShopping">
             <Link id='buyButton' to={'/buy'}> Buy </Link>
-            <h2> Total: {GetCartPrice()} </h2>
-            <button> Reset </button>
+            <h2> Total: ${GetCartPrice()} </h2>
+            <button onClick={() => emptyCart()}> Reset </button>
           </div></>)
         }
       
 
-        {/* OPCION 2: Devuelve el carrito cuando hay items */}
-        {itemsInCart === 0 && (<>
-          <p id="cartItemText"> CARRITO VACIO </p> 
-          <Link to={"/home"} id="goShopping"> Ir a comprar </Link>
-        </>)
-        }
+        {/* OPCION 2: Devuelve el carrito cuando NO hay items */}
+        {itemsInCart === 0 && (
+        <div id="emptyCart">
+            <p id="cartItemText"> CARRITO VACIO </p> 
+            <Link to={"/home"} id="goShopping"> Ir a comprar </Link>
+        </div>
+        )}
 
       </div>
     </>

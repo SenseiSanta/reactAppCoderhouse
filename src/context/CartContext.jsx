@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
@@ -7,8 +8,12 @@ const {Provider} = CartContext;
 
 const MyProvider = ({children}) => {
 
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('items')) ?? []);
 
+    useEffect(() => {
+      localStorage.setItem('items', JSON.stringify(cart))
+    }, [cart])
+    
     // Detecta si el item seleccionado ya esta en el carrito. Devuelve boolean
     const IsInCart = (id) => {
         return cart.some(x => x.id === id);
@@ -34,6 +39,9 @@ const MyProvider = ({children}) => {
         } else  {
             setCart([...cart, newItem])
         }
+
+        let cartJSON = JSON.stringify(cart)
+        window.localStorage.setItem('cart', cartJSON); 
     }
 
     // Vacia el carrito

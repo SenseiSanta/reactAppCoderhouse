@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 #cardStyle{
     width: 240px;
     padding-bottom: 20px;
     margin: 60px;
     background-color: rgba(145, 126, 101, 0.784);
+    box-shadow: -1px -1px 30px 10px rgba(255,255,255,0.45);
+    -webkit-box-shadow: -1px -1px 30px 10px rgba(255,255,255,0.45);
+    -moz-box-shadow: -1px -1px 30px 10px rgba(255,255,255,0.45);
 }
 
 #cardTitle{
@@ -10,6 +15,7 @@
     font-size: 18px;
     text-align: center;
     min-height: 80px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #cardBody{
