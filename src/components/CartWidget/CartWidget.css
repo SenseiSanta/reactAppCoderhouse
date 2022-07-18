@@ -1,6 +1,20 @@
 #cartLink{
-    color: black;
-    text-decoration: none;
-    width: 30px;
-    background-color: #092641;
+    width: 45px;
+    height: 40px;
+}
+
+@media only screen and (max-width: 475px) {
+    
+    #cartLink{
+        width: 40px;
+        height: 35px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    
+    #cartLink{
+        width: 35px;
+        height: 30px;
+    }
 }

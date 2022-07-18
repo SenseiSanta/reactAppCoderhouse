@@ -40,9 +40,6 @@ const MyProvider = ({children}) => {
         } else  {
             setCart([...cart, newItem])
         }
-
-        let cartJSON = JSON.stringify(cart)
-        window.localStorage.setItem('cart', cartJSON); 
     }
 
     // Reinicia el carrito

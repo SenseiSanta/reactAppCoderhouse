@@ -14,7 +14,7 @@ function BuyMenu() {
   const [email, setEmail] = useState('');
   const [cel, setCel] = useState('');
   const [loading, setLoading] = useState(false);
-  const [idCompra, setIdCompra] = useState('');
+  const [idTicket, setIdTicket] = useState('');
   const [recentPurchase, setRecentPurchase] = useState(false)
   const itemsInCart = GetItemQty();
   
@@ -71,7 +71,7 @@ function BuyMenu() {
     }
 
     addDoc(orderCollection, order).then(({id})=> {
-      setIdCompra(id);
+      setIdTicket(id);
       setRecentPurchase(true)
       emptyCart();
     }).finally(()=>{
@@ -84,7 +84,7 @@ function BuyMenu() {
   {loading && <LoadingWidget />}
     {/* Pantalla Post Compra */}
       { (itemsInCart === 0 & recentPurchase) && (<>
-        <h1 id='buyMenuTitle'> Tu compra ha sido un exito. Su ticket de seguimiento es: {idCompra} </h1>
+        <h1 id='buyMenuTitle'> Tu compra ha sido un exito. Su ticket de seguimiento es: {idTicket} </h1>
         <div id='linkContainer'> <Link id='linkToHome' to={'/'}> Ver mas productos </Link> </div>
       </>)}
 

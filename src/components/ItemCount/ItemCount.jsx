@@ -5,13 +5,13 @@ import swal from 'sweetalert'
 import '../ItemCount/ItemCount.css'
 
 export default function ItemCount( props ) {
-    const { cant, setCant, onAdd, max } = props;
+    const { qty, setQty, onAdd, max } = props;
 
     const initial = 1;
 
     const handleClickUp = () => {
-        if (cant < max) {
-            setCant(cant + 1)
+        if (qty < max) {
+            setQty(qty + 1)
         } else {
             swal({
                 text: 'No puedes sumar mas de la cantidad en stock',
@@ -21,8 +21,8 @@ export default function ItemCount( props ) {
     }
 
     const handleClickDown = () => {
-        if (cant > initial) {
-            setCant(cant - 1)
+        if (qty > initial) {
+            setQty(qty - 1)
         } else {
             swal({
                 text: 'No puedes restar items. Debe haber al menos 1',
@@ -37,7 +37,7 @@ export default function ItemCount( props ) {
             <button id='aditionButton' onClick={handleClickDown}> 
                 -
             </button>
-            <p id='counter'> {cant} </p>
+            <p id='counter'> {qty} </p>
             <button id='aditionButton' onClick={handleClickUp}>
                 +
             </button>

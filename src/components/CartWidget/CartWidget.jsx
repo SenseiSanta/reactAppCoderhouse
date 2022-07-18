@@ -10,7 +10,7 @@ function CartWidget() {
     const { GetItemQty } = useContext(CartContext);
     
     return (<>
-        <FaShoppingCart style={{width: '45px', height: '40px'}}/> {GetItemQty()}
+        <FaShoppingCart id='cartLink'/> {GetItemQty()}
     </>)
     }
 export default CartWidget
