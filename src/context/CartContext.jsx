@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
+import swal from 'sweetalert'
 
 export const CartContext = createContext();
 
@@ -44,9 +45,32 @@ const MyProvider = ({children}) => {
         window.localStorage.setItem('cart', cartJSON); 
     }
 
+    // Reinicia el carrito
+    const resetCart = () => {
+        swal({
+            text: 'Estas seguro que quieres reiniciar el carrito?',
+            buttons: {
+                Yes:{
+                    text: 'Si',
+                    value: true,
+                },
+                No:{
+                    text: 'No',
+                    value: false,
+                }
+            }
+          }).then((value) => {if (value) {
+            setCart([]);
+            swal({
+                text: 'Carrito reseteado',
+                icon: 'success'
+            })
+          }})
+    }
+
     // Vacia el carrito
     const emptyCart = () => {
-        setCart([]);
+        setCart([])
     }
 
     // Retorna un nuevo array sin el item seleccionado a eliminar
@@ -69,7 +93,7 @@ const MyProvider = ({children}) => {
         return cart.reduce((acc, x) => acc += x.quantity * x.price, 0)
     }
 
-        return <Provider value={{cart, IsInCart, addItem, deleteItem, emptyCart, GetItemQty, GetItemPrice, GetCartPrice}}> {children} </Provider>
+        return <Provider value={{cart, IsInCart, addItem, deleteItem, emptyCart, GetItemQty, GetItemPrice, GetCartPrice, resetCart}}> {children} </Provider>
     }
 
 export default MyProvider;

@@ -32,6 +32,12 @@
     margin: 5px;
 }
 
+#finalizeButton:hover{
+    background-color: black;
+    color: white;
+    transition: ease-in 250ms;
+}
+
 #itemBox{
     display: flex;
     flex-direction: column;
@@ -127,7 +133,7 @@
     }
   }
 
-  @media only screen and (max-width: 470px) {
+@media only screen and (max-width: 475px) {
 
     #imgItemDetail{
         max-width: 210px;
@@ -137,8 +143,4 @@
         max-width: 270px;
         height: auto;
     }
-}
-
-@media only screen and (max-width: 400px) {
-
 }

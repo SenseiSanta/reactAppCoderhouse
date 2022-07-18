@@ -1,6 +1,7 @@
 //@ts-check
 import React from 'react'
 import { FaCartPlus } from "react-icons/fa";
+import swal from 'sweetalert'
 import '../ItemCount/ItemCount.css'
 
 export default function ItemCount( props ) {
@@ -12,7 +13,10 @@ export default function ItemCount( props ) {
         if (cant < max) {
             setCant(cant + 1)
         } else {
-            alert('No puedes sumar')
+            swal({
+                text: 'No puedes sumar mas de la cantidad en stock',
+                icon: 'warning'
+            })
         }
     }
 
@@ -20,7 +24,10 @@ export default function ItemCount( props ) {
         if (cant > initial) {
             setCant(cant - 1)
         } else {
-            alert('No puedes restar')
+            swal({
+                text: 'No puedes restar items. Debe haber al menos 1',
+                icon: 'warning'
+            })
         }
     }
      

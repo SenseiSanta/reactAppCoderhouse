@@ -28,7 +28,6 @@
     transition: transform 80ms;
 }
 
-
 .navbarCategories{
     position: absolute;
     top: 35px;
@@ -85,6 +84,11 @@
     justify-content: center;
 }
 
+#rightNavbarIcon{
+    width: 45px;
+    height: 40px;
+}
+
 @media only screen and (max-width: 991px) {
     
     .navbarCategories{
@@ -103,6 +107,11 @@
         justify-content: space-around;
         align-items: center;
         font-size: 2rem;
+    }
+
+    #navbarCategory{
+        font-size: 1.7rem;
+        width: 90px;
     }
 }
 
@@ -127,8 +136,13 @@
         align-items: center;
     }
 
+    #rightNavbarIcon{
+        width: 40px;
+        height: 35px;
+    }
+
     #navbarCategory{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         width: 80px;
         padding: 5px;
         background-color: rgba(6, 4, 1, 0.315);
@@ -137,5 +151,13 @@
 
     #navbarBrand{
         margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    
+    #rightNavbarIcon{
+        width: 35px;
+        height: 30px;
     }
 }

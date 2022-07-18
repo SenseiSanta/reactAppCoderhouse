@@ -27,14 +27,14 @@ const [error, setError] = useState(false);
       getDocs(filter).then((snapshot) => { 
         setResultado(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
       })
-      .catch( (error) => console.log(`Ha ocurrido un error ' + ${error}`) )
+      .catch( (error) => console.log(true) )
       .finally( ()=> setLoading(false) )
 
     } else {
       getDocs(itemCollection).then((snapshot) => { 
         setResultado(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
       })
-      .catch( (error) => setError(`Ha ocurrido un error ' + ${error}`) )
+      .catch( (error) => setError(true) )
       .finally( ()=> setLoading(false) )
     }
 

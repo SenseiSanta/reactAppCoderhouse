@@ -2,11 +2,12 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom'
+import { BsTrash } from 'react-icons/bs'
 import '../Cart/Cart.css';
 
 function Cart() {
 
-  const { cart, deleteItem, GetCartPrice, GetItemPrice, GetItemQty, emptyCart } = useContext(CartContext);
+  const { cart, deleteItem, GetCartPrice, GetItemPrice, GetItemQty, resetCart } = useContext(CartContext);
   const itemsInCart = GetItemQty()
   
     return <>
@@ -21,16 +22,16 @@ function Cart() {
                                       </div>
                                       |
                                       <div id="secondCol">
-                                        <p id="cartItemText"> x{item.quantity}</p>
-                                        <p id="cartItemText"> ${GetItemPrice(item)} </p>
-                                        <button id="trashCan" onClick={() => {deleteItem(item.id)}}> Quitar </button>
+                                        <p id="cartItemData"> x{item.quantity}</p>
+                                        <p id="cartItemData"> ${GetItemPrice(item)} </p>
+                                        <button id="trashCan" onClick={() => {deleteItem(item.id)}}> <BsTrash /> </button>
                                       </div>
                                     </div>
           )}
           <div id="finalizeShopping">
-            <Link id='buyButton' to={'/buy'}> Buy </Link>
-            <h2> Total: ${GetCartPrice()} </h2>
-            <button onClick={() => emptyCart()}> Reset </button>
+            <Link id='finishButton' to={'/buy'}> Buy </Link>
+            <h2 id="totalText"> Total - ${GetCartPrice()}</h2>
+            <button onClick={() => resetCart()} id='finishButton'> Reset </button>
           </div></>)
         }
       

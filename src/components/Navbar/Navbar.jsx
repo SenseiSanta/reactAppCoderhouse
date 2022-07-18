@@ -19,11 +19,11 @@ function Navbar() {
                             <Link id='linkToCart' to={'/cart'}> <CartWidget /> </Link>
                         </li>
                         <li id='rightNavbarItem'>
-                            <Link id='linkToContact' to={'/contact'}> <AiOutlineMail style={{width: '45px', height: '40px'}}/> </Link>
+                            <Link id='linkToContact' to={'/contact'}> <AiOutlineMail id='rightNavbarIcon'/> </Link>
                         </li>
                         <li id='rightNavbarItem'>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-                                <span id='menuButton'> <RiMenuFill style={{width: '45px', height: '40px'}} /> </span>
+                                <span id='menuButton'> <RiMenuFill id='rightNavbarIcon' /> </span>
                             </button> 
                         </li>
                     </ul>

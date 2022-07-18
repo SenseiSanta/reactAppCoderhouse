@@ -17,8 +17,11 @@ function ItemDetail( {result} ) {
     setAdded(true);
   }
 
-  return (<>
-    <div id='itemDetailBox'>
+  return <>
+
+    {/* Pantalla principal sin datos */}
+    {!IsInCart(result.id) && (<>
+      <div id='itemDetailBox'>
       <img src={result.pictureURL} id='imgItemDetail' alt="imagen de producto" />
       <div id='itemBox'>
         <h2 id='nameText'> {result.name} </h2>
@@ -29,9 +32,25 @@ function ItemDetail( {result} ) {
     </div>
     <div id='backHomeDiv'>
         <Link to='/' id='backHomeLink'> Volver </Link>
+    </div> </>
+    )} 
+    
+    {/* Pantalla con datos (anti-refresh) */}
+    {IsInCart(result.id) && (<>
+      <div id='itemDetailBox'>
+      <img src={result.pictureURL} id='imgItemDetail' alt="imagen de producto" />
+      <div id='itemBox'>
+        <h2 id='nameText'> {result.name} </h2>
+        <p id='descriptionText'> {result.description} </p>
+        <p id='priceText'> ${result.price} </p>
+        <div id='finalizeBox'> <Link to='/cart' id='finalizeButton'> Ver Carrito </Link> <Link to='/home' id='finalizeButton'> Seguir Comprando </Link> </div>
+      </div>
     </div>
+    <div id='backHomeDiv'>
+        <Link to='/' id='backHomeLink'> Volver </Link>
+    </div> </>
+    )} 
     </>
-  )
 }
 
 export default ItemDetail

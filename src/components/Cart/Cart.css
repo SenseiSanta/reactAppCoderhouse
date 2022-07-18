@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#totalText{
+    margin: 0;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
 #cartContainer{
     background-color: rgba(62, 39, 11, 0.438);
     margin: 0 auto;
@@ -33,6 +41,18 @@
     margin: 0;
     text-align: center;
     width: 100%;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cartItemData{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #firstCol{
@@ -57,6 +77,10 @@
 
 #trashCan{
     margin-left: 10px;
+    background-color: #bbbb9d;
+    border: 1px black solid;
+    border-radius: 10px 10px 10px 10px;
+    width: 100px;
 }
 
 #finalizeShopping{
@@ -64,6 +88,20 @@
     color: black;
     justify-content: space-evenly;
     margin-top: 30px;
+}
+
+#finishButton{
+    text-decoration: none;
+    background-color: #bbbb9d;
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #goShopping{
@@ -76,25 +114,83 @@
     padding: 0px 10px;
     border: 2px solid #bbbb9d;
     border-radius: 20px 20px 20px 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (max-width: 870px) {
     
+    #cartItem{
+        margin: 10px 20px;
+        padding: 10px 20px;
+    }
+
     #cartContainer{
         margin: 0 35px;
+    }
+
+    #cartItemText, #cartItemData{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    #cartItem{
+        margin: 10px 10px;
+        padding: 10px 10px;
+    }
+
+    #cartItemText, #cartItemData{
+        font-size: 0.8rem;
     }
 }
 
 @media only screen and (max-width: 470px) {
     
+    #cartItem{
+        margin: 10px 5px;
+        padding: 10px 5px;
+    }
+
     #cartContainer{
         margin: 0 20px;
     }
+
+    #cartItemText, #cartItemData{
+        font-size: 0.7rem;
+    }
+
+    #firstCol{
+        padding-right: 10px;
+    }
+
+    #trashCan{
+        width: auto;
+    }
+
 }
 
 @media only screen and (max-width: 400px) {
     
+    #cartItem{
+        margin: 10px 2px;
+        padding: 10px 2px;
+    }
+
     #cartContainer{
         margin: 0 5px;
+    }
+
+    #cartContainer{
+        padding: 20px 5px;
+    }
+
+    #trashCan{
+        margin-left: 3px;
+    }
+
+    #finishButton{
+        width: 50px;
+        font-size: 0.8rem;
     }
 }

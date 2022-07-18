@@ -10,6 +10,11 @@
     -moz-box-shadow: -1px -1px 30px 10px rgba(255,255,255,0.45);
 }
 
+#cardStyle:hover{
+    transform: scale(1.015);
+    transition: transform 400ms;
+}
+
 #cardTitle{
     font-weight: bold;
     font-size: 18px;
@@ -27,10 +32,17 @@
 
 #productDetails{
     margin: 0 auto;
-    background-color: #2f2159;
+    background-color: black;
     color: white;
     width: 150px;
     padding: 3px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#productDetails:hover{
+    box-shadow: 0px 0px 30px 5px rgba(255,255,255,0.45);
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.45);
+    -moz-box-shadow: 0px 0px 30px 5px rgba(255,255,255,0.45);
 }
 
 #cardPrice{
@@ -42,6 +54,17 @@
 
 #cardStock{
     margin: 0;
+}
+
+#inCartText{
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#auxLink{
+    text-decoration: none;
+    color: bisque;
 }
 
 @media only screen and (max-width: 576px) {
